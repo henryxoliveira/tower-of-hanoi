@@ -1,0 +1,8 @@
+streamlit
+numpy
+pytest
+typing_extensions
+# optional dev tools:
+black
+ruff
+mypy
