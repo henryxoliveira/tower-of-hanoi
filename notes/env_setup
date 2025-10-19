@@ -1,0 +1,34 @@
+# Setup Notes: Step 1 (Environment Setup)
+
+In the terminal, I ran:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate   # (on macOS/Linux; on Windows use `.venv\Scripts\activate`)
+python -m pip install --upgrade pip
+pip install pytest
+
+
+What each command does
+
+python3 -m venv .venv
+    Creates a virtual environment in a folder called .venv.
+    This is like a self-contained workspace where Python libraries live, so they don’t mess with your global system Python.
+
+source .venv/bin/activate
+    Activates the virtual environment. Once activated:
+
+Your terminal prompt usually changes to show (.venv) at the beginning.
+
+Any pip install only affects this project, not your whole system.
+
+python -m pip install --upgrade pip
+    Updates pip (Python’s package manager) to the latest version inside this virtual environment.
+
+pip install pytest
+    Installs pytest, a testing framework we’ll use to check that our Tower of Hanoi code works correctly.
+    This also goes only into .venv, not your global Python.
+
+Why this matters
+    Keeps project dependencies isolated.
+    Lets anyone else working on the repo replicate the same environment by creating and activating .venv and installing dependencies from a requirements file later.
